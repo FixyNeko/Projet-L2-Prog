@@ -153,7 +153,7 @@ int main(int argc, char * argv[]){
             int positionDepart = positionFromLinCol(file, atoi(args[0]) - 1, atoi(args[1]) - 1);
             int car, nombre = min(atoi(args[2]), fileSize - positionDepart); // on ne veut pas supprimer de caractères en dehors du fichier
             int caracteresCopies = fileSize - positionDepart - nombre;
-            fileSize -= nombrse;
+            fileSize -= nombre;
             char * buffer[caracteresCopies];
             fseek(file, positionDepart + nombre, SEEK_SET); // on place le pointeur sur le premier des caracteres qu'on va copier
             fread(buffer, sizeof(char), caracteresCopies, file); // on copie les caracteres à deplacer de la fin de la suppresion à la fin du fichier
